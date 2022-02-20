@@ -8,6 +8,7 @@ class NeighborhoodsController < ApplicationController
 
   # GET /neighborhoods/1
   def show
+    @bookmark = Bookmark.new
   end
 
   # GET /neighborhoods/new
