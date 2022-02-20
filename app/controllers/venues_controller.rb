@@ -3,7 +3,7 @@ class VenuesController < ApplicationController
 
   # GET /venues
   def index
-    @venues = Venue.all
+    @venues = Venue.page(params[:page]).per(10)
     @location_hash = Gmaps4rails.build_markers(@venues.where.not(:physical_address_latitude => nil)) do |venue, marker|
       marker.lat venue.physical_address_latitude
       marker.lng venue.physical_address_longitude
