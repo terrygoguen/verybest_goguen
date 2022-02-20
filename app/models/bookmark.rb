@@ -1,6 +1,8 @@
 class Bookmark < ApplicationRecord
   # Direct associations
 
+  belongs_to :user
+
   belongs_to :neighborhood
 
   belongs_to :venue
