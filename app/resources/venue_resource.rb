@@ -8,12 +8,11 @@ class VenueResource < ApplicationResource
 
   # Direct associations
 
-  has_many   :bookmarks
+  has_many :bookmarks
 
   # Indirect associations
 
   many_to_many :dishes
 
   many_to_many :users
-
 end
